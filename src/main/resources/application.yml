@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://129.211.31.178:3308/sell?characterEncoding=utf-8&useSSL=false
+  http:
+    encoding:
+      charset: UTF-8
+      force: true
+server:
+  port: 8090
