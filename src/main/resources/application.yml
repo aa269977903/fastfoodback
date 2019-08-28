@@ -11,3 +11,9 @@ spring:
       force: true
 server:
   port: 8090
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

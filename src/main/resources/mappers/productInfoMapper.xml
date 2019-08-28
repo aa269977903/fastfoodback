@@ -15,6 +15,11 @@
       <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
+
+  <select id="queryAllmsg" resultMap="BaseResultMap">
+    select * from product_info
+  </select>
+
   <insert id="insert" parameterType="com.cest.entity.productInfo">
     insert into product_info (product_id, product_name, product_price, 
       product_stock, product_description, product_icon, 
