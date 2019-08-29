@@ -1,7 +1,7 @@
 package com.cest.fastfoodback;
 
-import com.cest.dao.productInfoMapper;
-import com.cest.entity.productInfo;
+import com.cest.dao.ProductInfoMapper;
+import com.cest.entity.ProductInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @SpringBootApplication
 @RestController
-@MapperScan("com.cest.dao")
+@MapperScan("com.cest")
 @Slf4j
 public class FastfoodbackApplication {
 
@@ -24,11 +24,11 @@ public class FastfoodbackApplication {
     }
 
     @Autowired
-    private productInfoMapper productInfoMappers;
+    private ProductInfoMapper productInfoMappers;
 
     @RequestMapping("/")
     public String test() {
-        List<productInfo> productInfos = productInfoMappers.queryAllmsg();
+        List<ProductInfo> productInfos = productInfoMappers.queryAllmsg();
         System.out.println(111);
         return "Hello SpringBoot";
     }

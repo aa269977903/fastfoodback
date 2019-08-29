@@ -5,26 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class productInfo implements Serializable {
-    private String productId;
+public class ProductCategory implements Serializable {
+    private Integer categoryId;
 
-    private String productName;
-
-    private BigDecimal productPrice;
-
-    private Integer productStock;
-
-    private String productDescription;
-
-    private String productIcon;
-
-    private Byte productStatus;
+    private String categoryName;
 
     private Integer categoryType;
 

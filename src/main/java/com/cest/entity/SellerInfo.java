@@ -10,12 +10,14 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class productCategory implements Serializable {
-    private Integer categoryId;
+public class SellerInfo implements Serializable {
+    private String id;
 
-    private String categoryName;
+    private String username;
 
-    private Integer categoryType;
+    private String password;
+
+    private String openid;
 
     private Date createTime;
 

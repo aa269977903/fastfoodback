@@ -11,7 +11,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class orderMaster implements Serializable {
+public class OrderMaster implements Serializable {
     private String orderId;
 
     private String buyerName;

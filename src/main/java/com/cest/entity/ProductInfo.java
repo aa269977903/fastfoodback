@@ -11,20 +11,22 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class orderDetail implements Serializable {
-    private String detailId;
-
-    private String orderId;
-
+public class ProductInfo implements Serializable {
     private String productId;
 
     private String productName;
 
     private BigDecimal productPrice;
 
-    private Integer productQuantity;
+    private Integer productStock;
+
+    private String productDescription;
 
     private String productIcon;
+
+    private Byte productStatus;
+
+    private Integer categoryType;
 
     private Date createTime;
 

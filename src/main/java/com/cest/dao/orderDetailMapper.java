@@ -1,11 +1,11 @@
 package com.cest.dao;
 
-import com.cest.entity.orderDetail;
+import com.cest.entity.OrderDetail;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface orderDetailMapper {
-    int insert(orderDetail record);
+public interface OrderDetailMapper {
+    int insert(OrderDetail record);
 
-    int insertSelective(orderDetail record);
+    int insertSelective(OrderDetail record);
 }
