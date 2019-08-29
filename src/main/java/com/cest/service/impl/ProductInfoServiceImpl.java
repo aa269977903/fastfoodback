@@ -4,12 +4,14 @@ import com.cest.dao.ProductInfoMapper;
 import com.cest.entity.ProductInfo;
 import com.cest.service.ProductInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
  * Created by cestlavie on 2019/8/29.
  */
+@Service
 public class ProductInfoServiceImpl implements ProductInfoService {
 
     @Autowired

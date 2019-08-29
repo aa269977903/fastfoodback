@@ -1,5 +1,6 @@
 package com.cest.Interceptor;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.cache.CacheKey;
 import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
@@ -28,6 +29,7 @@ import java.util.Properties;
         @Signature(type = Executor.class, method = "query", args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class, CacheKey.class,BoundSql.class}),
         @Signature(type = Executor.class, method = "update", args = {MappedStatement.class, Object.class})
 })
+@Slf4j
 public class SqlInterceptor implements Interceptor {
 
     @Override
@@ -47,7 +49,8 @@ public class SqlInterceptor implements Interceptor {
         long time = (end - start);
         if (time > 1) {
             String sql = getSql(configuration, boundSql, sqlId, time);
-            System.err.println(sql);
+            String[] split = sql.split(":");
+            log.debug("\n\n location：{} \n sql： {} \n costTime：{} \n",split[0],split[1],split[2]);
         }
         return returnValue;
     }
@@ -106,7 +109,6 @@ public class SqlInterceptor implements Interceptor {
             } else {
                 value = "";
             }
-
         }
         return value;
     }
