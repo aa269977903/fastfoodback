@@ -1,11 +1,15 @@
 package com.cest.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.Date;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class productCategory implements Serializable {
     private Integer categoryId;
 

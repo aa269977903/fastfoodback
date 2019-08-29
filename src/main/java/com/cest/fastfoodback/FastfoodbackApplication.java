@@ -14,6 +14,7 @@ import java.util.List;
 
 @SpringBootApplication
 @RestController
+@MapperScan("com.cest.dao")
 @Slf4j
 public class FastfoodbackApplication {
 
